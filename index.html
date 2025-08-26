@@ -1,54 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TimeZone Info</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nearby post-offices</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rouge+Script&family=Ruda:wght@400..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;1,500&family=Rouge+Script&family=Ruda:wght@400..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="white-container">
-        <h1>TimeZone API</h1>
-        <h1>Your Current Time Zone</h1>
+  <div id="homePage">
+    <div id="left" class="left">
+      <div class="info">
+        <h1 class="app-name">Nearby post-offices</h1>
+        <p>This Application allows you to extract information about nearest Post Offices, based on your location</p>
 
-        <div class="container" id="container">
-            <!-- <p>Name Of Time Zone :</p>
-            <span class="flex"><span>Lat:</span>
-            <span>Long:</span></span>
-            <p>Offset STD:</p>
-            <p>Offset STD Seconds :</p>
-            <p>Offset DST :</p>
-            <p>Offset DST Seconds:</p>
-            <p>Country:</p>
-            <p>Postcode:</p>
-            <p>City:</p> -->
-        </div>
+      </div>
+      <img class="homeImg" src="./image.png">
+
+    </div>
+    <div class="right" id="right">
+      <h2>Your Current IP Address is :<span id="your-ip-address"></span></h2>
+      <button id="btn" class="btn">Get Started</button>
+    </div>
+  </div>
+
+
+
+  <!-- after click this section shoud display -->
+   <div id="content">
+    <div id="ip-location">
+      <h2>IP Address: <span id="ip-address"></span></h3>
+      <div class="info">
+        <div id="lat">Lat:</div>
+        <div id="long">Long:</div>
+        <div id="city">City:</div>
+        <div id="region">Region:</div>
+        <div id="org">Organisation:</div>
+        <div id="hostname">Hostname:</div>
+      </div>
+    </div>
+    <div id="map-container" class="right">
+      <h2>Your Current Location</h2>
+      <div id="currentLocation"></div>
     </div>
 
-    <div class="black-container">
-        <h1>Enter Address</h1>
-        <div class="search-container" id="search-container">
-            <input type="text" placeholder="Address" id="search-bar">
-            <button id="btn">Submit</button>
-        </div>
+    <div class="left" id="more-info">
+      <h2>More Information About You</h2>
+      <div class="info" id="more-info-list">
+        <div id="timezone">Time Zone:</div>
+        <div id="dateAndTime">Date And Time:</div>
+        <div id="pincode">Pincode:</div>
+        <div>Message: Number of pincode(s) found <span id="message"></span> </div>
+      </div>
 
-        <div class="hidden-container" id="hidden-container">
-            <h1>Your result</h1>
-            <div class="container-2" id="container-2">
-                <!-- <p>Name Of Time Zone :</p>
-                <span class="flex"><span>Lat:</span>
-                <span>Long:</span></span>
-                <p>Offset STD:</p>
-                <p>Offset STD Seconds :</p>
-                <p>Offset DST :</p>
-                <p>Offset DST Seconds:</p>
-                <p>Country:</p>
-                <p>Postcode:</p>
-                <p>City:</p> -->
-            </div>
-        </div>
     </div>
-    <script src="./script.js"></script>
+    <div class="left" id="post-office-near">
+      <h2>Post Office Near You</h2>
+      <input id="searchInput" placeholder="Search By Name">
+      <div class="list-of-postoffice" id="post-offices">
+        
+      </div>
+    </div>
+   </div>
+
+
+
+  <script src="./script.js"></script>
 </body>
 </html>
